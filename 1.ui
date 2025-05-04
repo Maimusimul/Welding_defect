@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Система детектирования дефектов сварки</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_main">
+    <!-- Заголовок сверху -->
+    <item>
+     <widget class="QLabel" name="label_header">
+      <property name="text">
+       <string>
+        &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="center"&gt;
+        &lt;span style="font-size:18pt; font-weight:600;"&gt;Система детектирования дефектов сварки&lt;/span&gt;
+        &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+       </string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Блок с изображением (слева) и информацией (справа) -->
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_top">
+      <item>
+       <widget class="QGroupBox" name="groupBox_image">
+        <property name="title">
+         <string>Изображение</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_image">
+         <item>
+          <widget class="QLabel" name="label_imagePreview">
+           <property name="text">
+            <string>Здесь будет загруженное изображение</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>400</width>
+             <height>300</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_5">
+           <property name="text">
+            <string>Загрузить фото</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_info">
+        <property name="title">
+         <string>Информация</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_info">
+         <item>
+          <widget class="QLabel" name="label_filename">
+           <property name="text">
+            <string>Файл не выбран</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_resultInfo">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="openExternalLinks">
+            <bool>false</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- Блок с полем для вывода информации о дефектах -->
+    <item>
+     <widget class="QGroupBox" name="groupBox_textEdit">
+      <property name="title">
+       <string>Информация о дефектах</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_textEdit">
+       <item>
+        <widget class="QTextEdit" name="textEdit"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <!-- Кнопки внизу -->
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_buttons">
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>Сохранить результат</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Экспортировать отчет</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="text">
+         <string>Очистить интерфейс</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>Завершить работу</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
