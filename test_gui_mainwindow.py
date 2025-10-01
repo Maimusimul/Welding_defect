@@ -3,6 +3,7 @@ import pytest
 import numpy as np
 from PyQt5.QtWidgets import QApplication
 from ui.main_window import MainWindow
+from PyQt5.QtGui import QIcon
 
 @pytest.fixture
 def app(qtbot):
@@ -30,9 +31,10 @@ def test_load_image_button(qtbot, app, tmp_path):
     app.loaded_image_paths.add(str(test_img))
     item = QListWidgetItem()
     pixmap = QPixmap(str(test_img)).scaled(100, 100, Qt.KeepAspectRatio)
-    item.setIcon(pixmap)
+    item.setIcon(QIcon(pixmap))
     item.setData(Qt.UserRole, str(test_img))
     app.listWidget_images.addItem(item)
 
     assert app.listWidget_images.count() == 1
+
 
