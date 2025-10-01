@@ -1,6 +1,7 @@
 import pytest
 import cv2
 import numpy as np
+dummy_image = np.ones((100, 100, 3), dtype=np.uint8) * 255
 from ultralytics import YOLO
 from main import MainWindow  # Импортируем твой основной код
 
@@ -78,3 +79,4 @@ def test_open_image_no_file(monkeypatch, app):
     monkeypatch.setattr("PyQt5.QtWidgets.QFileDialog.getOpenFileName", lambda *args, **kwargs: ("", ""))
     app.open_image()
     assert app.loaded_image is None, "Не должно быть загруженного изображения при отмене выбора файла"
+
