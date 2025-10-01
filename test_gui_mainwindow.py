@@ -1,5 +1,6 @@
 import cv2
 import pytest
+import numpy as np
 from PyQt5.QtWidgets import QApplication
 from ui.main_window import MainWindow
 
@@ -34,3 +35,4 @@ def test_load_image_button(qtbot, app, tmp_path):
     app.listWidget_images.addItem(item)
 
     assert app.listWidget_images.count() == 1
+
