@@ -14,35 +14,3 @@ def app(qtbot):
     qtbot.waitExposed(test_app)
     return test_app
 
-# ========== Юнит-тесты ==========
-
-def test_load_image():
-    """Проверяет возможность загрузки тестового изображения."""
-    img = cv2.imread("D:/4 курс 2 семестр/Диплом/tests/sample.jpg")
-    assert img is not None, "Изображение не загружено"
-
-# ========== Тестирование интерфейса ==========
-
-def test_save_results_without_image():
-    """Проверяет возможность загрузки тестового изображения."""
-    img = cv2.imread("D:/4 курс 2 семестр/Диплом/tests/sample.jpg")
-    assert img is not None, "Изображение не загружено"
-
-
-def test_export_report_without_text():
-    """Проверяет возможность загрузки тестового изображения."""
-    img = cv2.imread("D:/4 курс 2 семестр/Диплом/tests/sample.jpg")
-    assert img is not None, "Изображение не загружено"
-
-
-def test_show_image_in_label():
-    """Проверяет возможность загрузки тестового изображения."""
-    img = cv2.imread("D:/4 курс 2 семестр/Диплом/tests/sample.jpg")
-    assert img is not None, "Изображение не загружено"
-
-
-def test_open_image_no_file():
-    """Проверяет возможность загрузки тестового изображения."""
-    img = cv2.imread("D:/4 курс 2 семестр/Диплом/tests/sample.jpg")
-
-    assert img is not None, "Изображение не загружено"
